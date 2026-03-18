@@ -1,0 +1,41 @@
+{
+  "source_path": "util.c",
+  "functions": [
+    {
+      "name": "add",
+      "params": [
+        { "name": "a", "ty": { "type": "Int" } },
+        { "name": "b", "ty": { "type": "Int" } }
+      ],
+      "return_type": { "type": "Int" },
+      "body": [
+        {
+          "stmt": "VarDecl",
+          "payload": {
+            "name": "sum",
+            "ty": { "type": "Int" },
+            "init": null
+          }
+        },
+        {
+          "stmt": "Assign",
+          "payload": {
+            "target": "sum",
+            "value": {
+              "expr": "Binary",
+              "payload": {
+                "op": "+",
+                "left": { "expr": "Var", "payload": "a" },
+                "right": { "expr": "Var", "payload": "b" }
+              }
+            }
+          }
+        },
+        {
+          "stmt": "Return",
+          "payload": { "expr": "Var", "payload": "sum" }
+        }
+      ]
+    }
+  ]
+}
