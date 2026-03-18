@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/c2rs-cli",
+    "crates/c2rs-core",
+    "crates/c2rs-toolchain",
+    "crates/c2rs-agent",
+    "crates/c2rs-tests",
+]
