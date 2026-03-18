@@ -1,0 +1,13 @@
+[package]
+name = "c2rs-agent"
+version = "0.1.0"
+edition = "2021"
+description = "LLM-based fix loop (repair only, never replaces IR→Rust)"
+
+[dependencies]
+c2rs-core = { path = "../c2rs-core" }
+c2rs-toolchain = { path = "../c2rs-toolchain" }
+thiserror = "1"
+anyhow = "1"
+tracing = "0.1"
+serde_json = "1"

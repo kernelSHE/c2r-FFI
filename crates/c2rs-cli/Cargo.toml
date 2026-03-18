@@ -1,0 +1,21 @@
+[package]
+name = "c2rs-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI for C→IR→Rust conversion"
+
+[[bin]]
+name = "c2rs"
+path = "src/main.rs"
+
+[dependencies]
+c2rs-core = { path = "../c2rs-core" }
+c2rs-toolchain = { path = "../c2rs-toolchain" }
+c2rs-agent = { path = "../c2rs-agent" }
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
