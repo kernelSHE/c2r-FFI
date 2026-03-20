@@ -1,0 +1,8 @@
+{
+  "files": {
+    "calc.c": "calc.rs"
+  },
+  "functions": {
+    "compute": "compute"
+  }
+}

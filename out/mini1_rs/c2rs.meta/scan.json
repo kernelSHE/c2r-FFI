@@ -1,0 +1,10 @@
+{
+  "c_files": [
+    "main.c",
+    "util.c"
+  ],
+  "h_files": [
+    "util.h"
+  ],
+  "include_dirs": []
+}

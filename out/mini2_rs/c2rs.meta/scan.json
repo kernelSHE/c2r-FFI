@@ -1,0 +1,7 @@
+{
+  "c_files": [
+    "calc.c"
+  ],
+  "h_files": [],
+  "include_dirs": []
+}

@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "stdout": "",
+  "stderr": "   Compiling converted v0.1.0 (/home/yang/BIN/c2rust_remove_externc/out/mini2_rs)\nwarning: function `compute` is never used\n --> src/calc.rs:3:8\n  |\n3 | pub fn compute(x: i32, n: i32) -> i32 {\n  |        ^^^^^^^\n  |\n  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: `converted` (lib) generated 1 warning\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s\n"
+}

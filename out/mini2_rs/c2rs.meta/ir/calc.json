@@ -1,0 +1,155 @@
+{
+  "source_path": "calc.c",
+  "functions": [
+    {
+      "name": "compute",
+      "params": [
+        {
+          "name": "x",
+          "ty": {
+            "type": "Int"
+          }
+        },
+        {
+          "name": "n",
+          "ty": {
+            "type": "Int"
+          }
+        }
+      ],
+      "return_type": {
+        "type": "Int"
+      },
+      "body": [
+        {
+          "stmt": "VarDecl",
+          "payload": {
+            "name": "acc",
+            "ty": {
+              "type": "Int"
+            },
+            "init": {
+              "expr": "Literal",
+              "payload": {
+                "literal": "Int",
+                "value": 0
+              }
+            }
+          }
+        },
+        {
+          "stmt": "VarDecl",
+          "payload": {
+            "name": "i",
+            "ty": {
+              "type": "Int"
+            },
+            "init": {
+              "expr": "Literal",
+              "payload": {
+                "literal": "Int",
+                "value": 0
+              }
+            }
+          }
+        },
+        {
+          "stmt": "If",
+          "payload": {
+            "cond": {
+              "expr": "Binary",
+              "payload": {
+                "op": ">",
+                "left": {
+                  "expr": "Var",
+                  "payload": "n"
+                },
+                "right": {
+                  "expr": "Literal",
+                  "payload": {
+                    "literal": "Int",
+                    "value": 0
+                  }
+                }
+              }
+            },
+            "then_body": [
+              {
+                "stmt": "While",
+                "payload": {
+                  "cond": {
+                    "expr": "Binary",
+                    "payload": {
+                      "op": "<",
+                      "left": {
+                        "expr": "Var",
+                        "payload": "i"
+                      },
+                      "right": {
+                        "expr": "Var",
+                        "payload": "n"
+                      }
+                    }
+                  },
+                  "body": [
+                    {
+                      "stmt": "Assign",
+                      "payload": {
+                        "target": "acc",
+                        "value": {
+                          "expr": "Binary",
+                          "payload": {
+                            "op": "+",
+                            "left": {
+                              "expr": "Var",
+                              "payload": "acc"
+                            },
+                            "right": {
+                              "expr": "Var",
+                              "payload": "x"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "stmt": "Assign",
+                      "payload": {
+                        "target": "i",
+                        "value": {
+                          "expr": "Binary",
+                          "payload": {
+                            "op": "+",
+                            "left": {
+                              "expr": "Var",
+                              "payload": "i"
+                            },
+                            "right": {
+                              "expr": "Literal",
+                              "payload": {
+                                "literal": "Int",
+                                "value": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "else_body": null
+          }
+        },
+        {
+          "stmt": "Return",
+          "payload": {
+            "expr": "Var",
+            "payload": "acc"
+          }
+        }
+      ]
+    }
+  ]
+}

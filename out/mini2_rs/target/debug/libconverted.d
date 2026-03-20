@@ -1,0 +1,1 @@
+/home/yang/BIN/c2rust_remove_externc/out/mini2_rs/target/debug/libconverted.rlib: /home/yang/BIN/c2rust_remove_externc/out/mini2_rs/src/calc.rs /home/yang/BIN/c2rust_remove_externc/out/mini2_rs/src/lib.rs
