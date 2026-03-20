@@ -1,0 +1,12 @@
+{
+  "extra_args": [
+    "-include",
+    "stdint.h",
+    "-include",
+    "inttypes.h",
+    "-I/usr/include",
+    "-I/usr/include/x86_64-linux-gnu",
+    "-isystem",
+    "/usr/lib/clang/17/include"
+  ]
+}
